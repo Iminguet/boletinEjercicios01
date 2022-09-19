@@ -7,8 +7,7 @@
 - [Boletín 1 de ejercicios](#boletín-1-de-ejercicios)
   - [Índice](#índice)
   - [Descripción](#descripción)
-  - [Screenshots](#screenshots)
-    - [Prerequisitos](#prerequisitos)
+  - [Prerequisitos](#prerequisitos)
   - [Uso](#uso)
   - [Licencia](#licencia)
   - [Contacto](#contacto)
@@ -78,13 +77,11 @@ Este proyecto no se ha hecho sin interfaz gráfica y todo se prueba sobre consol
     ^: 1o operando como base y 2o como exponente.
     %: módulo, resto de la división entre operando1 y operando2.
 
-## Screenshots
-
 <img src="" />## Desarrolado con:
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
 
-### Prerequisitos
+## Prerequisitos
 
 Navegador web
 
