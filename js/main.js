@@ -285,31 +285,34 @@
   // %: módulo, resto de la división entre operando1 y operando2.
 
   const dato01 = parseInt(prompt('dato 1'));
-  const operacion = prompt('operacion');
+  const operacion = prompt(
+    'operacion',
+    'sumar +, restar -, multiplicar *, dividir /, exponente **, resto %'
+  ).toLowerCase();
   const dato02 = parseInt(prompt('dato 2'));
 
-  const suma = function (valor01, valor02, simbolo) {
-    if (simbolo === '+') return valor01 + valor02;
+  const suma = (valor01, valor02, simbolo) => {
+    if (simbolo === '+' || simbolo === 'sumar') return valor01 + valor02;
   };
-  const resta = function (valor01, valor02, simbolo) {
-    if (simbolo === '-') return valor01 - valor02;
+  const resta = (valor01, valor02, simbolo) => {
+    if (simbolo === '-' || simbolo === 'restar') return valor01 - valor02;
   };
-  const multiplicacion = function (valor01, valor02, simbolo) {
-    if (simbolo === '*') return valor01 * valor02;
+  const multiplicacion = (valor01, valor02, simbolo) => {
+    if (simbolo === '*' || simbolo === 'multiplicar') return valor01 * valor02;
   };
-  const division = function (valor01, valor02, simbolo) {
-    if (simbolo === '/') return valor01 / valor02;
+  const division = (valor01, valor02, simbolo) => {
+    if (simbolo === '/' || simbolo === 'dividir') return valor01 / valor02;
   };
-  const base = function (valor01, valor02, simbolo) {
-    if (simbolo === '^') return valor01 ** valor02;
+  const base = (valor01, valor02, simbolo) => {
+    if (simbolo === '**' || simbolo === 'exponente') return valor01 ** valor02;
   };
-  const resto = function (valor01, valor02, simbolo) {
-    if (simbolo === '%') {
+  const resto = (valor01, valor02, simbolo) => {
+    if (simbolo === '%' || simbolo === 'resto') {
       return (valor01 / valor02) % 2;
     }
   };
 
-  const resultado = function (valor01, valor02, simbolo) {
+  const resultado = (valor01, valor02, simbolo) => {
     return (
       suma(valor01, valor02, simbolo) ||
       resta(valor01, valor02, simbolo) ||
@@ -317,10 +320,11 @@
       division(valor01, valor02, simbolo) ||
       base(valor01, valor02, simbolo) ||
       resto(valor01, valor02, simbolo) ||
-      console.log('Introduce valores validos')
+      'Introduce valores validos'
     );
   };
 
   console.log(resultado(dato01, dato02, operacion));
+
   console.log('--------------------------------------------------------');
 }
